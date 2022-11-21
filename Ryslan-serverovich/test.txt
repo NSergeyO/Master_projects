@@ -1,0 +1,185 @@
+Привет Всем!!!!
+Вот новая работа по гиту:
+
+sip_3@SIP3 MINGW64 ~/Desktop/Master_projects (Ryslan-testovich)
+$ git status
+On branch Ryslan-testovich
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Ryslan-serverovich/readme.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ~$Frontend_shporgalka.xlsx
+
+
+sip_3@SIP3 MINGW64 ~/Desktop/Master_projects (Ryslan-testovich)
+$ git status
+On branch Ryslan-testovich
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Ryslan-serverovich/readme.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test.txt
+        ~$Frontend_shporgalka.xlsx
+
+
+sip_3@SIP3 MINGW64 ~/Desktop/Master_projects (Ryslan-testovich)
+$ git add .
+error: open("~$Frontend_shporgalka.xlsx"): Permission denied
+error: unable to index file '~$Frontend_shporgalka.xlsx'
+fatal: adding files failed
+
+sip_3@SIP3 MINGW64 ~/Desktop/Master_projects (Ryslan-testovich)
+$ git status
+On branch Ryslan-testovich
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Ryslan-serverovich/readme.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test.txt
+        ~$Frontend_shporgalka.xlsx
+
+
+sip_3@SIP3 MINGW64 ~/Desktop/Master_projects (Ryslan-testovich)
+$ git add .
+
+sip_3@SIP3 MINGW64 ~/Desktop/Master_projects (Ryslan-testovich)
+$ git status
+On branch Ryslan-testovich
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Frontend_shporgalka.xlsx
+        new file:   Ryslan-serverovich/readme.txt
+        new file:   test.txt
+
+
+sip_3@SIP3 MINGW64 ~/Desktop/Master_projects (Ryslan-testovich)
+$ git commit -m ">"
+[Ryslan-testovich 2f1bf4c] >
+ 3 files changed, 1 insertion(+)
+ create mode 100644 Ryslan-serverovich/readme.txt
+ create mode 100644 test.txt
+
+sip_3@SIP3 MINGW64 ~/Desktop/Master_projects (Ryslan-testovich)
+$ git push origin Ryslan-serverovich
+error: src refspec Ryslan-serverovich does not match any
+error: failed to push some refs to 'https://github.com/NSergeyO/Master_projects.git'
+
+sip_3@SIP3 MINGW64 ~/Desktop/Master_projects (Ryslan-testovich)
+$ git push origin master
+Everything up-to-date
+
+sip_3@SIP3 MINGW64 ~/Desktop/Master_projects (Ryslan-testovich)
+$ git status
+On branch Ryslan-testovich
+nothing to commit, working tree clean
+
+sip_3@SIP3 MINGW64 ~/Desktop/Master_projects (Ryslan-testovich)
+$ git push origin -u Ryslan-testovich
+To https://github.com/NSergeyO/Master_projects.git
+ ! [rejected]        Ryslan-testovich -> Ryslan-testovich (non-fast-forward)
+error: failed to push some refs to 'https://github.com/NSergeyO/Master_projects.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+sip_3@SIP3 MINGW64 ~/Desktop/Master_projects (Ryslan-testovich)
+$ git branch
+* Ryslan-testovich
+  master
+  readme
+  test-submaster
+
+sip_3@SIP3 MINGW64 ~/Desktop/Master_projects (Ryslan-testovich)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+sip_3@SIP3 MINGW64 ~/Desktop/Master_projects (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+sip_3@SIP3 MINGW64 ~/Desktop/Master_projects (master)
+$ git push origin master
+Everything up-to-date
+
+sip_3@SIP3 MINGW64 ~/Desktop/Master_projects (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+sip_3@SIP3 MINGW64 ~/Desktop/Master_projects (master)
+$ git add .
+
+sip_3@SIP3 MINGW64 ~/Desktop/Master_projects (master)
+$ git commit -m ">"
+[master f0735e5] >
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test.txt
+
+sip_3@SIP3 MINGW64 ~/Desktop/Master_projects (master)
+$ git push origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 258 bytes | 129.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/NSergeyO/Master_projects.git
+   29ff5ac..f0735e5  master -> master
+
+sip_3@SIP3 MINGW64 ~/Desktop/Master_projects (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    test.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Ryslan-serverovich/test.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+sip_3@SIP3 MINGW64 ~/Desktop/Master_projects (master)
+$ git add .
+
+sip_3@SIP3 MINGW64 ~/Desktop/Master_projects (master)
+$ git commit -m ">"
+[master 30843b8] >
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename test.txt => Ryslan-serverovich/test.txt (100%)
+
+sip_3@SIP3 MINGW64 ~/Desktop/Master_projects (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 315 bytes | 315.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/NSergeyO/Master_projects.git
+   f0735e5..30843b8  master -> master
+
+sip_3@SIP3 MINGW64 ~/Desktop/Master_projects (master)
+$
